@@ -1,0 +1,5 @@
+FROM haproxy:lts
+#EXPOSE 9000
+#EXPOSE 9001
+COPY ./sslcerts/leonnunes.dev/completecert.pem /usr/local/etc/haproxy/ssl/server.pem
+COPY ./haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
